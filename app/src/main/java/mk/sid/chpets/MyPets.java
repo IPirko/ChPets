@@ -5,7 +5,11 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+
+
 
 /**
  * Created by IP on 10/27/2016.
@@ -35,16 +39,24 @@ public  class MyPets extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
-
-    public MyPets() {
-    }
+    
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
         View rootView = inflater.inflate(R.layout.my_pets, container, false);
         TextView textView = (TextView) rootView.findViewById(R.id.section_label);
         textView.setText("test MyPets");
+
+
+        final EditText etEMail = (EditText) rootView.findViewById(R.id.etEMail);
+        final EditText etPassword = (EditText) rootView.findViewById(R.id.etPassword);
         return rootView;
     }
+
+
+
+
 }
